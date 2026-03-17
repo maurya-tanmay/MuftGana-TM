@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Muft Gana — Full Songs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0c0c10;--bg2:#131318;--bg3:#1a1a22;
+  --s:#222230;--s2:#2a2a3a;
+  --line:rgba(255,255,255,0.06);
+  --g:#00e5a0;--g2:#7b5fff;--g3:#ff5e8a;
+  --t:#f0f0f8;--t2:#7878a0;--t3:#404060;
+  --ph:80px;
+  --sans:'Outfit',sans-serif;--disp:'Bebas Neue',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:var(--sans);min-height:100vh;overflow-x:hidden}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-thumb{background:var(--s2);border-radius:99px}
+img{display:block}
+button,input{font-family:var(--sans);cursor:pointer}
+
+/* ── AMBIENT BG ── */
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 60% 40% at 20% 10%, rgba(0,229,160,.04) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 80% 80%, rgba(123,95,255,.05) 0%, transparent 70%);
+}
+
+/* ── LAYOUT ── */
+.layout{display:flex;position:relative;z-index:1}
+
+/* ── SIDEBAR ── */
+.sidebar{
+  width:210px;flex-shrink:0;background:var(--bg2);
+  border-right:1px solid var(--line);
+  position:fixed;top:0;left:0;bottom:0;z-index:100;
+  display:flex;flex-direction:column;
+  transition:transform .3s cubic-bezier(.4,0,.2,1);
+}
+.sb-brand{padding:26px 20px 22px;border-bottom:1px solid var(--line)}
+.sb-brand h1{font-family:var(--disp);font-size:26px;letter-spacing:1px;line-height:1}
+.sb-brand h1 span{color:var(--g)}
+.sb-brand p{font-size:9px;letter-spacing:2.5px;color:var(--t3);margin-top:3px}
+.sb-body{flex:1;overflow-y:auto;padding:12px}
+.sb-label{font-size:9px;font-weight:700;letter-spacing:2px;color:var(--t3);padding:14px 8px 5px}
+.nb{
+  display:flex;align-items:center;gap:10px;
+  width:100%;padding:9px 10px;border-radius:8px;
+  background:none;border:none;color:var(--t2);
+  font-size:13px;font-weight:500;text-align:left;
+  transition:all .15s;
+}
+.nb svg{width:15px;height:15px;flex-shrink:0}
+.nb:hover{color:var(--t);background:var(--s)}
+.nb.on{color:var(--g);background:rgba(0,229,160,.08)}
+.gb{
+  display:flex;align-items:center;gap:8px;
+  width:100%;padding:7px 10px;border-radius:7px;
+  background:none;border:none;color:var(--t2);
+  font-size:12.5px;text-align:left;transition:all .15s;
+}
+.gd{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.gb:hover{color:var(--t);background:var(--s)}
+.sb-foot{padding:12px 20px;border-top:1px solid var(--line);font-size:10px;color:var(--t3)}
+
+/* ── MAIN ── */
+.main{margin-left:210px;min-height:100vh;padding-bottom:calc(var(--ph)+20px)}
+
+/* ── TOP BAR ── */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:linear-gradient(to bottom,var(--bg) 60%,transparent);
+  padding:20px 32px 14px;
+  display:flex;align-items:center;gap:12px;
+}
+.sbox{
+  flex:1;max-width:580px;
+  display:flex;align-items:center;gap:10px;
+  background:var(--s);border:1.5px solid var(--line);
+  border-radius:50px;padding:11px 18px;
+  transition:all .2s;
+}
+.sbox:focus-within{border-color:var(--g);box-shadow:0 0 0 3px rgba(0,229,160,.1)}
+.sbox svg{width:15px;height:15px;color:var(--t2);flex-shrink:0}
+.sbox input{
+  flex:1;background:none;border:none;outline:none;
+  color:var(--t);font-size:14px;
+}
+.sbox input::placeholder{color:var(--t3)}
+.xbtn{background:none;border:none;color:var(--t2);font-size:15px;opacity:0;transition:opacity .15s;padding:0}
+.xbtn.v{opacity:1}
+.api-badge{
+  background:var(--s);border:1px solid var(--line);
+  border-radius:6px;padding:5px 11px;font-size:11px;color:var(--t2);
+  white-space:nowrap;flex-shrink:0;
+}
+.api-badge strong{color:var(--g)}
+
+/* ── HOME ── */
+.hero{padding:36px 32px 28px;border-bottom:1px solid var(--line)}
+.hero-chip{
+  display:inline-flex;align-items:center;gap:5px;
+  background:rgba(0,229,160,.08);border:1px solid rgba(0,229,160,.18);
+  border-radius:99px;padding:4px 12px;
+  font-size:10px;font-weight:700;letter-spacing:.5px;color:var(--g);
+  margin-bottom:16px;
+}
+.hero h2{font-family:var(--disp);font-size:clamp(46px,6vw,78px);line-height:.95;letter-spacing:1px;margin-bottom:8px}
+.hero h2 em{font-style:normal;-webkit-text-stroke:1.5px var(--g);color:transparent}
+.hero p{color:var(--t2);font-size:15px;font-weight:300;margin-bottom:22px}
+.pills{display:flex;flex-wrap:wrap;gap:7px}
+.pill{
+  background:var(--s);border:1px solid var(--line);
+  border-radius:99px;padding:6px 14px;
+  font-size:12px;color:var(--t2);
+  transition:all .15s;
+}
+.pill:hover{background:var(--s2);color:var(--t);border-color:var(--g)}
+
+/* ── SECTION ── */
+.sec{padding:24px 32px}
+.sec-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px}
+.sec-top h3{font-family:var(--disp);font-size:20px;letter-spacing:.5px}
+.sec-top span{font-size:11.5px;color:var(--t2)}
+
+/* ── CARD GRID ── */
+.cgrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(158px,1fr));
+  gap:12px;
+}
+.ccard{
+  background:var(--bg2);border:1px solid var(--line);
+  border-radius:12px;overflow:hidden;cursor:pointer;
+  transition:all .2s;position:relative;
+}
+.ccard:hover{transform:translateY(-3px);border-color:rgba(0,229,160,.2);box-shadow:0 10px 28px rgba(0,0,0,.5)}
+.ccard.now{border-color:var(--g);box-shadow:0 0 0 1px var(--g),0 8px 24px rgba(0,229,160,.15)}
+.cart{position:relative;width:100%;padding-top:100%;background:var(--s);overflow:hidden}
+.cart img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.ccard:hover .cart img{transform:scale(1.06)}
+.cov{position:absolute;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+.ccard:hover .cov,.ccard.now .cov{opacity:1}
+.pcir{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--g);border:none;color:#000;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .15s;
+}
+.pcir svg{width:16px;height:16px}
+.pcir:hover{transform:scale(1.1)}
+.ceq{
+  position:absolute;bottom:7px;right:7px;
+  display:flex;align-items:flex-end;gap:2px;height:16px;
+  background:rgba(0,0,0,.65);padding:3px 5px;border-radius:5px;
+}
+.eb{width:3px;background:var(--g);border-radius:2px;animation:eq .55s ease-in-out infinite alternate}
+.eb:nth-child(2){animation-delay:.14s;height:6px}
+.eb:nth-child(3){animation-delay:.28s}
+@keyframes eq{from{height:3px}to{height:13px}}
+.cbody{padding:11px 12px 12px}
+.ctitle{font-size:12.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px}
+.cartist{font-size:11px;color:var(--t2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.csrc{
+  display:inline-block;margin-top:5px;
+  font-size:9.5px;font-weight:700;letter-spacing:.4px;
+  padding:2px 6px;border-radius:4px;
+}
+.csrc.full{background:rgba(0,229,160,.12);color:var(--g)}
+.csrc.prev{background:rgba(255,94,138,.1);color:var(--g3)}
+
+/* ── TRACK LIST ── */
+.tlist{display:flex;flex-direction:column;gap:2px}
+.trow{
+  display:flex;align-items:center;gap:12px;
+  padding:8px 10px;border-radius:9px;cursor:pointer;
+  transition:background .12s;
+}
+.trow:hover{background:var(--s)}
+.trow.now{background:rgba(0,229,160,.06)}
+.rn{width:24px;text-align:center;font-size:11.5px;color:var(--t3);flex-shrink:0}
+.trow.now .rn{color:var(--g)}
+.rart{width:42px;height:42px;border-radius:7px;object-fit:cover;flex-shrink:0;background:var(--s)}
+.ri{flex:1;min-width:0}
+.rtitle{font-size:13.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trow.now .rtitle{color:var(--g)}
+.rsub{font-size:11px;color:var(--t2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rdur{font-size:11px;color:var(--t2);flex-shrink:0;font-variant-numeric:tabular-nums}
+.rsrc{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:4px;flex-shrink:0}
+.rsrc.full{background:rgba(0,229,160,.12);color:var(--g)}
+.rsrc.prev{background:rgba(255,94,138,.1);color:var(--g3)}
+
+/* ── STATES ── */
+.ctr{
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:center;padding:70px 20px;
+  color:var(--t2);gap:12px;text-align:center;
+}
+.ctr svg{width:48px;height:48px;opacity:.25}
+.ctr p{font-size:14.5px}
+.ctr small{font-size:11.5px;color:var(--t3)}
+.spin{
+  width:38px;height:38px;border-radius:50%;
+  border:3px solid var(--s2);border-top-color:var(--g);
+  animation:rot .65s linear infinite;
+}
+@keyframes rot{to{transform:rotate(360deg)}}
+
+/* ── PLAYER ── */
+.player{
+  position:fixed;bottom:0;left:0;right:0;height:var(--ph);
+  background:rgba(12,12,16,.96);border-top:1px solid var(--line);
+  backdrop-filter:blur(28px);
+  display:grid;grid-template-columns:1fr 1.8fr 1fr;
+  align-items:center;padding:0 22px;gap:12px;z-index:200;
+}
+.pi{display:flex;align-items:center;gap:11px;min-width:0}
+.pa{
+  width:48px;height:48px;border-radius:9px;
+  object-fit:cover;flex-shrink:0;background:var(--s);
+}
+.pa.playing{animation:vspin 10s linear infinite}
+@keyframes vspin{to{transform:rotate(360deg)}}
+.pm{min-width:0}
+.pt{font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.par{font-size:11.5px;color:var(--t2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.psrc{font-size:9.5px;margin-top:3px}
+.psrc.full{color:var(--g)}
+.psrc.prev{color:var(--g3)}
+
+.pc{display:flex;flex-direction:column;align-items:center;gap:5px}
+.pbtns{display:flex;align-items:center;gap:9px}
+.pbtn{
+  background:none;border:none;color:var(--t2);
+  padding:5px;border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .13s;
+}
+.pbtn svg{width:16px;height:16px}
+.pbtn:hover{color:var(--t)}
+.pbtn.on{color:var(--g)}
+.pplay{
+  width:38px;height:38px;border-radius:50%;
+  background:var(--g);color:#000;border:none;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .15s;
+}
+.pplay svg{width:15px;height:15px}
+.pplay:hover{filter:brightness(1.15);transform:scale(1.05)}
+
+.pprog{display:flex;align-items:center;gap:8px;width:100%}
+.ptime{font-size:10px;color:var(--t2);min-width:30px;font-variant-numeric:tabular-nums}
+.pbar{
+  flex:1;height:3px;background:var(--s2);
+  border-radius:3px;cursor:pointer;position:relative;
+  transition:height .15s;
+}
+.pbar:hover{height:5px}
+.pfill{height:100%;background:linear-gradient(90deg,var(--g),var(--g2));border-radius:3px;pointer-events:none;transition:width .1s linear}
+.pdot{
+  position:absolute;top:50%;transform:translate(-50%,-50%);
+  width:11px;height:11px;border-radius:50%;background:#fff;
+  left:0;pointer-events:none;opacity:0;transition:opacity .15s;
+}
+.pbar:hover .pdot{opacity:1}
+
+.pr{display:flex;align-items:center;justify-content:flex-end;gap:7px}
+.vwrap{display:flex;align-items:center;gap:6px}
+.vslider{
+  width:76px;-webkit-appearance:none;height:3px;
+  border-radius:3px;background:var(--s2);outline:none;
+}
+.vslider::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;border-radius:50%;background:var(--t);cursor:pointer}
+
+/* ── TOAST ── */
+.toast{
+  position:fixed;bottom:calc(var(--ph)+12px);left:50%;
+  transform:translateX(-50%) translateY(14px);
+  background:var(--s2);border:1px solid var(--line);
+  color:var(--t);padding:8px 18px;border-radius:99px;
+  font-size:12px;font-weight:500;
+  opacity:0;pointer-events:none;z-index:300;
+  transition:all .22s;white-space:nowrap;
+}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── MOBILE ── */
+.mob-bar{
+  display:none;position:fixed;top:0;left:0;right:0;
+  height:52px;background:var(--bg2);border-bottom:1px solid var(--line);
+  align-items:center;justify-content:space-between;
+  padding:0 14px;z-index:150;
+}
+.mob-ham,.mob-sb{background:none;border:none;color:var(--t);font-size:17px;padding:6px}
+.sb-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99}
+
+@media(max-width:900px){
+  .sidebar{transform:translateX(-100%)}
+  .sidebar.open{transform:translateX(0)}
+  .sb-ov.v{display:block}
+  .mob-bar{display:flex}
+  .main{margin-left:0;padding-top:52px}
+  .topbar,.hero,.sec{padding-left:14px;padding-right:14px}
+  .player{grid-template-columns:1fr auto;padding:0 12px;height:62px}
+  .pc,.pr{display:none}
+  .mob-pp{display:flex!important}
+}
+.mob-pp{
+  display:none;background:none;border:none;
+  color:var(--t);padding:7px;
+  align-items:center;justify-content:center;
+}
+.mob-pp svg{width:22px;height:22px}
+
+@media(max-width:500px){
+  .cgrid{grid-template-columns:repeat(2,1fr)}
+  .hero h2{font-size:40px}
+}
+</style>
+</head>
+<body>
+
+<!-- MOBILE BAR -->
+<header class="mob-bar">
+  <button class="mob-ham" id="mobHam">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <span style="font-family:var(--disp);font-size:20px;letter-spacing:1px">MUFT<span style="color:var(--g)">GANA</span></span>
+  <button class="mob-sb" id="mobSb">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+  </button>
+</header>
+
+<div class="sb-ov" id="sbOv"></div>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sb-brand">
+    <h1>MUFT<span>GANA</span></h1>
+    <p>UNLIMITED MUSIC</p>
+  </div>
+  <div class="sb-body">
+    <div class="sb-label">DISCOVER</div>
+    <button class="nb on" data-view="home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Home
+    </button>
+    <button class="nb" data-view="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      Search
+    </button>
+
+    <div class="sb-label">GENRES</div>
+    <button class="gb" data-q="latest hindi songs 2024"><span class="gd" style="background:#ff5e8a"></span>Bollywood</button>
+    <button class="gb" data-q="arijit singh songs"><span class="gd" style="background:#fd9644"></span>Arijit Singh</button>
+    <button class="gb" data-q="punjabi songs 2024"><span class="gd" style="background:#f7ca18"></span>Punjabi</button>
+    <button class="gb" data-q="Taylor Swift hits"><span class="gd" style="background:#00e5a0"></span>Taylor Swift</button>
+    <button class="gb" data-q="hip hop rap 2024"><span class="gd" style="background:#7b5fff"></span>Hip-Hop</button>
+    <button class="gb" data-q="lofi chill music"><span class="gd" style="background:#45aaf2"></span>Lo-fi</button>
+    <button class="gb" data-q="The Weeknd songs"><span class="gd" style="background:#a55eea"></span>The Weeknd</button>
+    <button class="gb" data-q="AR Rahman songs"><span class="gd" style="background:#26de81"></span>A.R. Rahman</button>
+    <button class="gb" data-q="rock classic hits"><span class="gd" style="background:#fc5c65"></span>Rock</button>
+    <button class="gb" data-q="k-pop BTS songs"><span class="gd" style="background:#fd79a8"></span>K-Pop</button>
+  </div>
+  <div class="sb-foot">Muft Gana · For personal use</div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="sbox" id="sbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="si" placeholder="Search any song, artist, album…" autocomplete="off"/>
+      <button class="xbtn" id="xbtn">✕</button>
+    </div>
+    <div class="api-badge">via <strong>JioSaavn</strong></div>
+  </div>
+
+  <!-- HOME VIEW -->
+  <div id="vhome">
+    <div class="hero">
+      <div class="hero-chip">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="10" height="10"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        FULL SONGS · NO LIMITS
+      </div>
+      <h2>SEARCH.<br/><em>STREAM.</em></h2>
+      <p>Any song, full length. Powered by JioSaavn — 100M+ tracks.</p>
+      <div class="pills" id="hpills">
+        <span class="pill" data-q="Tum Hi Ho Arijit Singh">Tum Hi Ho</span>
+        <span class="pill" data-q="Shape of You Ed Sheeran">Shape of You</span>
+        <span class="pill" data-q="Blinding Lights Weeknd">Blinding Lights</span>
+        <span class="pill" data-q="Kesariya Brahmastra">Kesariya</span>
+        <span class="pill" data-q="Levitating Dua Lipa">Levitating</span>
+        <span class="pill" data-q="Bohemian Rhapsody Queen">Bohemian Rhapsody</span>
+        <span class="pill" data-q="Unstoppable Sia">Unstoppable</span>
+        <span class="pill" data-q="Attention Charlie Puth">Attention</span>
+        <span class="pill" data-q="Jai Ho AR Rahman">Jai Ho</span>
+        <span class="pill" data-q="Stay The Kid LAROI Justin Bieber">Stay</span>
+        <span class="pill" data-q="Raataan Lambiyan">Raataan Lambiyan</span>
+        <span class="pill" data-q="Peaches Justin Bieber">Peaches</span>
+      </div>
+    </div>
+    <div class="sec" id="hsec">
+      <div class="sec-top">
+        <h3 id="htitle">TRENDING NOW</h3>
+        <span id="hcount"></span>
+      </div>
+      <div id="hcontent"><div class="ctr"><div class="spin"></div><p>Loading…</p></div></div>
+    </div>
+  </div>
+
+  <!-- SEARCH VIEW -->
+  <div id="vsearch" style="display:none">
+    <div class="sec">
+      <div class="sec-top">
+        <h3 id="rtitle">RESULTS</h3>
+        <span id="rcount"></span>
+      </div>
+      <div id="rcontent">
+        <div class="ctr" id="sempty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <p>Search any song or artist</p>
+          <small>Full songs stream via JioSaavn</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+</div><!-- layout -->
+
+<!-- PLAYER -->
+<div class="player" id="player">
+  <div class="pi">
+    <img class="pa" id="pa" src="" alt=""/>
+    <div class="pm">
+      <div class="pt" id="pt">Nothing playing</div>
+      <div class="par" id="par">Search something to begin</div>
+      <div class="psrc" id="psrc"></div>
+    </div>
+  </div>
+
+  <div class="pc">
+    <div class="pbtns">
+      <button class="pbtn" id="shbtn" title="Shuffle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+      </button>
+      <button class="pbtn" id="pvbtn" title="Previous">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5"/></svg>
+      </button>
+      <button class="pplay" id="ppbtn">
+        <svg id="ppico" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      </button>
+      <button class="pbtn" id="pnbtn" title="Next">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/></svg>
+      </button>
+      <button class="pbtn" id="rpbtn" title="Repeat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+      </button>
+    </div>
+    <div class="pprog">
+      <span class="ptime" id="pct">0:00</span>
+      <div class="pbar" id="pbar">
+        <div class="pfill" id="pfill" style="width:0%"></div>
+        <div class="pdot" id="pdot"></div>
+      </div>
+      <span class="ptime" id="ptt">0:00</span>
+    </div>
+  </div>
+
+  <div class="pr">
+    <div class="vwrap">
+      <button class="pbtn" id="mbtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+      </button>
+      <input type="range" class="vslider" id="vs" min="0" max="1" step="0.02" value="0.85"/>
+    </div>
+  </div>
+
+  <!-- Mobile play btn -->
+  <button class="mob-pp" id="mobPp">
+    <svg id="mobPpIco" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+  </button>
+</div>
+
+<div class="toast" id="toast"></div>
+<audio id="audio" preload="none"></audio>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyByE2R0WjW3ZEZ-RYtdYpzVEK8LY7EUm8Y",
+    authDomain: "muft-gana.firebaseapp.com",
+    projectId: "muft-gana",
+    storageBucket: "muft-gana.firebasestorage.app",
+    messagingSenderId: "429079032056",
+    appId: "1:429079032056:web:8229f62fd983506f3f0b0d",
+    measurementId: "G-1WXQ6X4F00"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  MUFT GANA — Full song streaming via JioSaavn API
+//  saavn.dev  →  free, full-length, high-quality MP3s
+// ═══════════════════════════════════════════════════════
+
+const audio = document.getElementById('audio');
+
+// Multiple saavn.dev mirrors/fallbacks
+const SAAVN_HOSTS = [
+  'https://saavn.dev',
+  'https://jiosaavn-api-privatecvc2.vercel.app',
+];
+let saavnHost = SAAVN_HOSTS[0];
+
+// ── State ──────────────────────────────────────────────
+let queue = [], qIdx = -1, curTrack = null;
+let shuffleOn = false, repeatOn = false, prevVol = 0.85;
+let searchTimer;
+
+// ── Helpers ────────────────────────────────────────────
+const $  = id => document.getElementById(id);
+const fmt = s => {
+  if (!s || isNaN(s)) return '0:00';
+  return `${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`;
+};
+function toast(msg, dur=2800) {
+  const t = $('toast');
+  t.textContent = msg; t.classList.add('on');
+  clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove('on'), dur);
+}
+function san(s) {
+  const d = document.createElement('div'); d.textContent = s||''; return d.innerHTML;
+}
+function setPlayIcon(playing) {
+  const svg = playing
+    ? '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>'
+    : '<polygon points="5 3 19 12 5 21 5 3"/>';
+  $('ppico').innerHTML = svg;
+  $('mobPpIco').innerHTML = svg;
+}
+
+// ── Audio engine ───────────────────────────────────────
+audio.volume = 0.85;
+
+audio.addEventListener('timeupdate', () => {
+  if (!audio.duration) return;
+  const p = (audio.currentTime / audio.duration) * 100;
+  $('pfill').style.width = p + '%';
+  $('pdot').style.left = p + '%';
+  $('pct').textContent = fmt(audio.currentTime);
+});
+audio.addEventListener('loadedmetadata', () => {
+  $('ptt').textContent = fmt(audio.duration);
+});
+audio.addEventListener('ended', () => {
+  if (repeatOn) { audio.currentTime = 0; audio.play(); }
+  else playNext();
+});
+audio.addEventListener('play', () => {
+  setPlayIcon(true);
+  $('pa').classList.add('playing');
+  highlightNow();
+});
+audio.addEventListener('pause', () => {
+  setPlayIcon(false);
+  $('pa').classList.remove('playing');
+});
+audio.addEventListener('error', (e) => {
+  console.warn('Audio error:', e);
+  // Try next quality or next track
+  if (curTrack && curTrack._qualityFallback) {
+    tryNextQuality();
+  } else {
+    toast('⚠️ Stream failed — skipping…');
+    setTimeout(playNext, 900);
+  }
+});
+
+function tryNextQuality() {
+  const t = curTrack;
+  if (!t._urls || !t._urls.length) { toast('No streams available'); return; }
+  const next = t._urls.shift();
+  if (!next) { toast('All streams failed — skipping'); setTimeout(playNext,900); return; }
+  audio.src = next;
+  audio.play().catch(() => {});
+}
+
+function loadTrack(track, play = true) {
+  curTrack = track;
+  $('pt').textContent = track.title;
+  $('par').textContent = track.artist + (track.album ? ` · ${track.album}` : '');
+  $('pa').src = track.art || '';
+  $('pa').classList.remove('playing');
+  document.title = `${track.title} – Muft Gana`;
+
+  if (track.source === 'saavn') {
+    $('psrc').className = 'psrc full';
+    $('psrc').textContent = '▶ Full song · JioSaavn';
+  } else {
+    $('psrc').className = 'psrc prev';
+    $('psrc').textContent = '▶ Preview · iTunes';
+  }
+
+  $('pfill').style.width = '0%';
+  $('pdot').style.left = '0%';
+  $('pct').textContent = '0:00';
+  $('ptt').textContent = track.duration ? fmt(track.duration) : '0:00';
+
+  audio.src = track.url;
+  if (play) audio.play().catch(() => toast('Tap play to start'));
+  highlightNow();
+}
+
+function playNext() {
+  if (!queue.length) return;
+  if (shuffleOn) qIdx = Math.floor(Math.random() * queue.length);
+  else qIdx = (qIdx + 1) % queue.length;
+  loadTrack(queue[qIdx]);
+}
+function playPrev() {
+  if (!queue.length) return;
+  if (audio.currentTime > 3) { audio.currentTime = 0; return; }
+  qIdx = (qIdx - 1 + queue.length) % queue.length;
+  loadTrack(queue[qIdx]);
+}
+function togglePlay() {
+  if (!curTrack) return;
+  audio.paused ? audio.play().catch(()=>{}) : audio.pause();
+}
+
+$('ppbtn').addEventListener('click', togglePlay);
+$('mobPp').addEventListener('click', togglePlay);
+$('pvbtn').addEventListener('click', playPrev);
+$('pnbtn').addEventListener('click', playNext);
+
+$('shbtn').addEventListener('click', () => {
+  shuffleOn = !shuffleOn;
+  $('shbtn').classList.toggle('on', shuffleOn);
+  toast(shuffleOn ? '🔀 Shuffle on' : 'Shuffle off');
+});
+$('rpbtn').addEventListener('click', () => {
+  repeatOn = !repeatOn;
+  $('rpbtn').classList.toggle('on', repeatOn);
+  toast(repeatOn ? '🔁 Repeat on' : 'Repeat off');
+});
+
+// Progress bar
+let drag = false;
+$('pbar').addEventListener('mousedown', e => { drag = true; doSeek(e); });
+document.addEventListener('mousemove', e => { if (drag) doSeek(e); });
+document.addEventListener('mouseup', () => drag = false);
+$('pbar').addEventListener('touchmove', e => {
+  e.preventDefault();
+  const r = $('pbar').getBoundingClientRect();
+  audio.currentTime = Math.max(0, Math.min(1, (e.touches[0].clientX - r.left) / r.width)) * (audio.duration || 0);
+}, { passive: false });
+function doSeek(e) {
+  if (!audio.duration) return;
+  const r = $('pbar').getBoundingClientRect();
+  audio.currentTime = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)) * audio.duration;
+}
+
+// Volume
+$('vs').addEventListener('input', () => { audio.volume = parseFloat($('vs').value); prevVol = audio.volume; updateVolIcon(); });
+$('mbtn').addEventListener('click', () => {
+  if (audio.volume > 0) { prevVol = audio.volume; audio.volume = 0; $('vs').value = 0; }
+  else { audio.volume = prevVol || 0.85; $('vs').value = audio.volume; }
+  updateVolIcon();
+});
+function updateVolIcon() {
+  const v = audio.volume;
+  const p = v === 0
+    ? '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>'
+    : v < 0.4
+    ? '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>'
+    : '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>';
+  $('mbtn').innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${p}</svg>`;
+}
+
+// ── Highlight now-playing ──────────────────────────────
+function highlightNow() {
+  document.querySelectorAll('.trow,.ccard').forEach(el => {
+    const on = curTrack && el.dataset.id === String(curTrack.id);
+    el.classList.toggle('now', on);
+  });
+  // eq bars on cards
+  document.querySelectorAll('.ccard.now').forEach(c => {
+    if (!c.querySelector('.ceq')) {
+      const eq = document.createElement('div'); eq.className = 'ceq';
+      eq.innerHTML = '<div class="eb"></div><div class="eb"></div><div class="eb"></div>';
+      c.querySelector('.cart').appendChild(eq);
+    }
+  });
+  document.querySelectorAll('.ccard:not(.now) .ceq').forEach(e => e.remove());
+}
+
+// ══════════════════════════════════════════════════════
+//  SAAVN API  — full song streams
+// ══════════════════════════════════════════════════════
+async function saavnSearch(q, limit = 20) {
+  const url = `${saavnHost}/api/search/songs?query=${encodeURIComponent(q)}&limit=${limit}&page=1`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Saavn HTTP ${res.status}`);
+  const json = await res.json();
+
+  const results = json?.data?.results || json?.results || [];
+  return results.map(s => parseSaavnSong(s)).filter(t => t.url);
+}
+
+function parseSaavnSong(s) {
+  // Build quality-ordered URL list
+  const dlUrls = s.downloadUrl || s.download_url || s.more_info?.encrypted_media_url ? [] : [];
+
+  // saavn.dev format: downloadUrl is array of {quality, url}
+  if (Array.isArray(s.downloadUrl)) {
+    const order = ['320kbps','160kbps','96kbps','48kbps','12kbps'];
+    for (const q of order) {
+      const found = s.downloadUrl.find(u => u.quality === q);
+      if (found?.url) dlUrls.push(found.url);
+    }
+  }
+  // older format: direct string
+  if (!dlUrls.length && s.media_url) dlUrls.push(s.media_url);
+  if (!dlUrls.length && s.url) dlUrls.push(s.url);
+
+  const best = dlUrls[0] || null;
+  const art = (() => {
+    if (Array.isArray(s.image)) {
+      const hi = s.image.find(i => i.quality === '500x500') || s.image.find(i => i.quality === '150x150') || s.image[s.image.length - 1];
+      return hi?.url || hi?.link || '';
+    }
+    return s.image || s.image_url || '';
+  })();
+
+  const artists = (() => {
+    if (s.artists?.primary) return s.artists.primary.map(a => a.name).join(', ');
+    if (s.primaryArtists) return s.primaryArtists;
+    if (s.more_info?.artistMap?.primary_artists) return s.more_info.artistMap.primary_artists.map(a => a.name).join(', ');
+    return s.artists || 'Unknown';
+  })();
+
+  return {
+    id: 'sv_' + (s.id || s.songid || Math.random()),
+    title: s.name || s.song || s.title || 'Unknown',
+    artist: artists,
+    album: s.album?.name || s.album || s.more_info?.album || '',
+    art,
+    url: best,
+    _urls: dlUrls.slice(1), // fallback quality URLs
+    _qualityFallback: dlUrls.length > 1,
+    duration: parseInt(s.duration) || 0,
+    source: 'saavn',
+    lang: s.language || '',
+  };
+}
+
+// ══════════════════════════════════════════════════════
+//  iTunes API  — English song previews (fallback)
+// ══════════════════════════════════════════════════════
+async function itunesSearch(q, limit = 10) {
+  const url = `https://itunes.apple.com/search?term=${encodeURIComponent(q)}&media=music&entity=song&limit=${limit}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('iTunes error');
+  const d = await res.json();
+  return (d.results || []).filter(t => t.previewUrl).map(t => ({
+    id: 'it_' + t.trackId,
+    title: t.trackName,
+    artist: t.artistName,
+    album: t.collectionName,
+    art: t.artworkUrl100?.replace('100x100','500x500') || t.artworkUrl60,
+    url: t.previewUrl,
+    _urls: [],
+    _qualityFallback: false,
+    duration: Math.round(t.trackTimeMillis / 1000),
+    source: 'itunes',
+  }));
+}
+
+// ══════════════════════════════════════════════════════
+//  COMBINED SEARCH
+// ══════════════════════════════════════════════════════
+async function doSearch(q) {
+  $('rtitle').textContent = `"${q}"`;
+  $('rcount').textContent = '';
+  $('rcontent').innerHTML = `<div class="ctr"><div class="spin"></div><p>Searching…</p></div>`;
+
+  let saavnTracks = [], itunesTracks = [];
+
+  // Run both in parallel
+  const [saavnRes, itunesRes] = await Promise.allSettled([
+    saavnSearch(q, 30),
+    itunesSearch(q, 15),
+  ]);
+
+  if (saavnRes.status === 'fulfilled') saavnTracks = saavnRes.value;
+  if (itunesRes.status === 'fulfilled') itunesTracks = itunesRes.value;
+
+  // If saavn totally failed, try alternate host
+  if (saavnRes.status === 'rejected' && saavnHost === SAAVN_HOSTS[0]) {
+    saavnHost = SAAVN_HOSTS[1];
+    try { saavnTracks = await saavnSearch(q, 30); } catch(e) { saavnTracks = []; }
+  }
+
+  // De-duplicate iTunes against Saavn by title+artist similarity
+  const saavnTitles = new Set(saavnTracks.map(t => norm(t.title + t.artist)));
+  const itunesUniq = itunesTracks.filter(t => !saavnTitles.has(norm(t.title + t.artist)));
+
+  // Saavn full songs first, then iTunes previews for gaps
+  const merged = [...saavnTracks, ...itunesUniq];
+  queue = merged; qIdx = 0;
+
+  if (!merged.length) {
+    $('rcontent').innerHTML = `<div class="ctr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><p>No results for "${san(q)}"</p><small>Try a different keyword</small></div>`;
+    $('rcount').textContent = '';
+    return;
+  }
+
+  const fullCount = saavnTracks.length;
+  const prevCount = itunesUniq.length;
+  let countText = `${merged.length} tracks`;
+  if (fullCount > 0) countText += ` · ${fullCount} full`;
+  if (prevCount > 0) countText += ` · ${prevCount} preview`;
+  $('rcount').textContent = countText;
+
+  renderList(merged, $('rcontent'));
+  highlightNow();
+}
+
+function norm(s) { return s.toLowerCase().replace(/[^a-z0-9]/g,'').substring(0,20); }
+
+// ── Render list ────────────────────────────────────────
+function renderList(tracks, container) {
+  const list = document.createElement('div');
+  list.className = 'tlist';
+  tracks.forEach((t, i) => {
+    const row = document.createElement('div');
+    row.className = 'trow' + (curTrack && curTrack.id === t.id ? ' now' : '');
+    row.dataset.id = t.id;
+    const srcBadge = t.source === 'saavn'
+      ? `<span class="rsrc full">FULL</span>`
+      : `<span class="rsrc prev">30s</span>`;
+    row.innerHTML = `
+      <span class="rn">${i+1}</span>
+      <img class="rart" src="${san(t.art)||'https://placehold.co/42x42/1a1a22/444?text=♪'}" alt="" loading="lazy"
+           onerror="this.src='https://placehold.co/42x42/1a1a22/444?text=♪'"/>
+      <div class="ri">
+        <div class="rtitle">${san(t.title)}</div>
+        <div class="rsub">${san(t.artist)}${t.album?` · ${san(t.album)}`:''}${t.lang?` · ${san(t.lang)}`:''}</div>
+      </div>
+      ${t.duration ? `<span class="rdur">${fmt(t.duration)}</span>` : ''}
+      ${srcBadge}
+    `;
+    row.addEventListener('click', () => { qIdx = i; loadTrack(t); });
+    list.appendChild(row);
+  });
+  container.innerHTML = '';
+  container.appendChild(list);
+}
+
+// ── Render card grid ───────────────────────────────────
+function renderGrid(tracks, container) {
+  const grid = document.createElement('div');
+  grid.className = 'cgrid';
+  tracks.forEach((t, i) => {
+    const c = document.createElement('div');
+    c.className = 'ccard' + (curTrack && curTrack.id === t.id ? ' now' : '');
+    c.dataset.id = t.id;
+    const srcSpan = t.source === 'saavn'
+      ? `<span class="csrc full">FULL</span>`
+      : `<span class="csrc prev">PREVIEW</span>`;
+    c.innerHTML = `
+      <div class="cart">
+        <img src="${san(t.art)||'https://placehold.co/300x300/1a1a22/333?text=♪'}" alt="" loading="lazy"
+             onerror="this.src='https://placehold.co/300x300/1a1a22/333?text=♪'"/>
+        <div class="cov">
+          <button class="pcir">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="cbody">
+        <div class="ctitle">${san(t.title)}</div>
+        <div class="cartist">${san(t.artist)}</div>
+        ${srcSpan}
+      </div>
+    `;
+    c.addEventListener('click', () => { qIdx = i; loadTrack(t); });
+    grid.appendChild(c);
+  });
+  container.innerHTML = '';
+  container.appendChild(grid);
+  highlightNow();
+}
+
+// ── View management ────────────────────────────────────
+function showView(v) {
+  $('vhome').style.display = v === 'home' ? '' : 'none';
+  $('vsearch').style.display = v === 'search' ? '' : 'none';
+  document.querySelectorAll('.nb[data-view]').forEach(b => b.classList.toggle('on', b.dataset.view === v));
+  closeSidebar();
+}
+
+document.querySelectorAll('.nb[data-view]').forEach(b => b.addEventListener('click', () => {
+  showView(b.dataset.view);
+  if (b.dataset.view === 'search') $('si').focus();
+}));
+
+// Genre + pill shortcuts
+function quickSearch(q) {
+  $('si').value = q;
+  $('xbtn').classList.add('v');
+  showView('search');
+  doSearch(q);
+}
+document.querySelectorAll('.gb').forEach(b => b.addEventListener('click', () => quickSearch(b.dataset.q)));
+document.querySelectorAll('.pill').forEach(p => p.addEventListener('click', () => quickSearch(p.dataset.q)));
+document.querySelector('#hpills').addEventListener('click', e => {
+  const pill = e.target.closest('.pill');
+  if (pill) quickSearch(pill.dataset.q);
+});
+
+// ── Search input ───────────────────────────────────────
+const si = $('si'), xbtn = $('xbtn');
+si.addEventListener('input', () => {
+  const q = si.value.trim();
+  xbtn.classList.toggle('v', q.length > 0);
+  clearTimeout(searchTimer);
+  if (!q) { showView('home'); return; }
+  showView('search');
+  if (q.length < 2) return;
+  searchTimer = setTimeout(() => doSearch(q), 400);
+});
+si.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && si.value.trim()) doSearch(si.value.trim());
+});
+xbtn.addEventListener('click', () => {
+  si.value = ''; xbtn.classList.remove('v'); showView('home');
+});
+
+// ── Mobile ─────────────────────────────────────────────
+function closeSidebar() { $('sidebar').classList.remove('open'); $('sbOv').classList.remove('v'); }
+$('mobHam').addEventListener('click', () => { $('sidebar').classList.toggle('open'); $('sbOv').classList.toggle('v'); });
+$('sbOv').addEventListener('click', closeSidebar);
+$('mobSb').addEventListener('click', () => { showView('search'); $('si').focus(); closeSidebar(); });
+
+// ── Keyboard shortcuts ─────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (['INPUT','TEXTAREA'].includes(e.target.tagName)) return;
+  if (e.key === ' ') { e.preventDefault(); togglePlay(); }
+  else if (e.key === 'ArrowRight') audio.currentTime = Math.min(audio.currentTime + 10, audio.duration || 0);
+  else if (e.key === 'ArrowLeft')  audio.currentTime = Math.max(audio.currentTime - 10, 0);
+  else if (e.key === 'ArrowUp')    { audio.volume = Math.min(1, audio.volume + .1); $('vs').value = audio.volume; updateVolIcon(); }
+  else if (e.key === 'ArrowDown')  { audio.volume = Math.max(0, audio.volume - .1); $('vs').value = audio.volume; updateVolIcon(); }
+  else if (e.key === 'n') playNext();
+  else if (e.key === 'p') playPrev();
+  else if (e.key === '/' || e.key === 's') { e.preventDefault(); $('si').focus(); }
+});
+
+// ── Load home trending ─────────────────────────────────
+async function loadHome() {
+  const queries = [
+    'top songs 2024 hindi',
+    'trending songs 2024',
+    'best bollywood 2024',
+    'popular songs today',
+  ];
+  const q = queries[Math.floor(Math.random() * queries.length)];
+  $('htitle').textContent = 'TRENDING NOW';
+  try {
+    const tracks = await saavnSearch(q, 20);
+    if (!tracks.length) throw new Error('empty');
+    queue = tracks; qIdx = 0;
+    $('hcount').textContent = `${tracks.length} full songs`;
+    renderGrid(tracks, $('hcontent'));
+  } catch(e) {
+    // Fallback to iTunes for home display
+    try {
+      const t = await itunesSearch('popular hits 2024', 20);
+      queue = t; qIdx = 0;
+      $('hcount').textContent = `${t.length} tracks`;
+      renderGrid(t, $('hcontent'));
+    } catch(e2) {
+      $('hcontent').innerHTML = `<div class="ctr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><p>Search for a song above to begin</p></div>`;
+    }
+  }
+}
+
+loadHome();
+</script>
+</body>
+</html>
